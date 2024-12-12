@@ -60,7 +60,8 @@
 /* bannerOne start */
 
 .screenOne-banner {
-  padding-top: 110px;
+  /* padding-top: 110px; */
+  padding-top: 22px;
   padding-bottom: 45px;
   justify-content: space-between;
 }
@@ -148,32 +149,192 @@
   border: 1px;
   top: 36%;
   left: 65%;
-  transform: rotate(-68deg);
+  transform: rotate(271deg);
   position: absolute;
 }
-
-/* 
-.screenimg-one {
-  position: absolute;
-  top: 15%;
-}
-.screenimg-two {
-  position: absolute;
-  left: 67%;
-  top: 9%;
-}
-.screenimg-three {
-  width: 422px;
-  height: 324px;
-  top: 45px;
-  left: -196px;
-  gap: 0px;
-  border: 1px;
-  opacity: 0px;
-}
-.screenimg-four {
-  position: absolute;
-  left: 0;
-} */
 
 /* bannerOne end */
+
+/* Trusted companies start */
+.trusted-customers {
+  flex-direction: column;
+  margin-top: 115px;
+}
+.trusted-para,
+.certified-para {
+  font-family: Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 44.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(86, 86, 86, 1);
+}
+
+.trusted-logoWrapper {
+  padding-top: 43px;
+  display: flex;
+  gap: 79px;
+  align-items: center;
+  padding-bottom: 145px;
+}
+/* Trusted companies end */
+
+/* certified-cources start */
+.certified-cources {
+  flex-direction: column;
+}
+
+.certified-mainwrapper {
+  padding: 89px 0;
+  display: flex;
+  gap: 95px;
+}
+/* .certified-para {
+  font-family: Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 44.8px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(86, 86, 86, 1);
+} */
+
+.cources-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 333px;
+  height: 288px;
+  border-radius: 31px;
+  background-color: rgba(236, 237, 239, 1);
+}
+
+.cources-imgwrapper {
+  /* width: 50px;
+  height: 50px; */
+}
+
+.cources-para {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(55, 54, 54, 1);
+  margin-top: -22px;
+}
+.viewCourceBtn {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.52px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background-color: rgba(194, 245, 120, 1);
+  padding: 11px 22px;
+  border-radius: 8px;
+  margin-top: 21px;
+  margin-bottom: 50px;
+}
+/* certified-cources end */
+
+/* solution banner start */
+
+.solution-banner {
+  gap: 110px;
+  padding-top: 160px;
+  padding-bottom: 377px;
+}
+.solutbanner-left-block {
+  width: 548px;
+  height: 517px;
+  border-radius: 8px;
+}
+
+.solutbanner-right-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: -75px;
+}
+
+.solutbanner-para {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 64.8px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.solutbanner-solution-subwrapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 17px;
+  margin-left: -44px;
+}
+
+.solutbanner-solution-subwrapper:first-child() {
+  margin-top: -20px;
+}
+
+.solutbanner-solution-wrapper {
+  /* width: 50px;
+    height: 50px; */
+}
+.solutbanner-solution-para {
+  padding-bottom: 37px;
+  margin-left: -38px;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.solutbanner-btnWrpper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 229px;
+  height: 69px;
+  padding: 17px 52px 16px 26px;
+  border-radius: 8px;
+  background-color: rgba(194, 245, 120, 1);
+  margin-top: -39px;
+}
+
+.solutbanner-img-btnWrpper {
+  width: 25px;
+  height: 22px;
+}
+
+.solutbannerBtn {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(62, 62, 62, 1);
+}
+
+/* solution banner  end */
+
+/*  classiq-footer start */
+.classiq-footer{
+
+}
+
+/* classiq-footer end */
