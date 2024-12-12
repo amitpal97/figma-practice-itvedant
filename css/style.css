@@ -333,8 +333,50 @@
 /* solution banner  end */
 
 /*  classiq-footer start */
-.classiq-footer{
+.classiq-footer {
+}
+.classiq-footer-block {
+  display: flex;
+}
 
+.classiq-footer-leftblock {
+}
+
+.classiq-footer-imgwrapper {
+}
+
+.classiq-footer-paraOne {
+}
+
+.classiq-footer-paraTwo {
+}
+
+.classiq-footer-emailwrapper {
+}
+
+.classiq-footer-emailwrapper input {
+}
+
+.classiq-footer-emailBtn {
+}
+
+.classiq-footer-rightblock {
+}
+
+.classiq-footer-rightblock-classiqBussines {
+}
+.classiq-footer-rightblock-careers {
+  display: flex;
+}
+
+.classiq-footer-subBlock {
+}
+
+.classiq-footer-subblockleft {
+}
+.classiq-footer-subblockleft-para {
+}
+.classiq-footer-subblockright {
 }
 
 /* classiq-footer end */
