@@ -252,7 +252,9 @@
 .solution-banner {
   gap: 110px;
   padding-top: 160px;
-  padding-bottom: 377px;
+  /* padding-bottom: 377px; */
+  padding-bottom: 255px;
+
 }
 .solutbanner-left-block {
   width: 548px;
@@ -334,49 +336,140 @@
 
 /*  classiq-footer start */
 .classiq-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
 }
 .classiq-footer-block {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 2px solid lightgray;
 }
 
 .classiq-footer-leftblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.classiq-footer-logo-wrapper {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 .classiq-footer-imgwrapper {
+  width: 49px;
+  height: 49px;
+  margin-right: 13px;
 }
 
 .classiq-footer-paraOne {
+  font-family: Poppins, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 34.2px;
+  color: #000000;
+  margin-bottom: 5px;
 }
 
 .classiq-footer-paraTwo {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(150, 152, 154, 1);
+  margin-bottom: 15px;
 }
 
 .classiq-footer-emailwrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+  width: 436px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  margin-bottom: 40px;
 }
 
 .classiq-footer-emailwrapper input {
+  padding-left: 13px;
+  border: none;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(150, 152, 154, 1);
 }
 
 .classiq-footer-emailBtn {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(62, 62, 62, 1);
+  border-radius: 8px;
+  padding: 6px 23px;
+  background-color: rgba(194, 245, 120, 1);
 }
 
 .classiq-footer-rightblock {
+  display: flex;
+  gap: 200px;
 }
 
-.classiq-footer-rightblock-classiqBussines {
-}
+.classiq-footer-rightblock-classiqBussines,
 .classiq-footer-rightblock-careers {
   display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(150, 152, 154, 1);
 }
+.classiq-footer-rightblock-classiqBussines li:nth-child(1) {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+}
+.classiq-footer-rightblock-careers li:nth-child(1) {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+}
+/* .classiq-footer-rightblock-careers {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+} */
 
 .classiq-footer-subBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .classiq-footer-subblockleft {
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 34.2px;
+  /* color: rgba(150, 152, 154, 1); */
+  color: rgb(29, 0, 0);
 }
 .classiq-footer-subblockleft-para {
 }
+
 .classiq-footer-subblockright {
+    display: flex;
+    gap: 25px;
 }
 
 /* classiq-footer end */
