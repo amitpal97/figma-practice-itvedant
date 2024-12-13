@@ -10,25 +10,53 @@ document.getElementById("signUpBtn").addEventListener("click", function () {
 
 
 function signup(){
+let signupformbtn=  document.getElementById("signupformbtn")
+console.log("signupformbtn",signupformbtn);
 
-    document.getElementById("signupformbtn").addEventListener("click", function (e) {
-
+signupformbtn.addEventListener("click", function (e) {
+        
+        console.log(e);
         e.preventDefault();
-        // window.location.href = "./login.html"
+        window.location.href = "./login.html"
     })
 }
-signup()
-
 
 function login(){
+let formloginFormBtn=document.getElementById("formloginFormBtn")
+console.log("formloginFormBtn",formloginFormBtn);
 
-    document.getElementById("formloginFormBtn").addEventListener("click", function (e) {
+formloginFormBtn.addEventListener("click", function (e) {
+        console.log("login");
         e.preventDefault();
-        // window.location.href = "./screen.html"
+        window.location.href = "./screen.html"
+        
     })
 }
 
-login();
+try{
+
+    signup()   
+
+}
+catch(error){
+console.log(error);
+
+}
+
+
+try{
+
+    login();
+}
+catch(eror){
+console.log(error);
+
+}
+
+
+
+
+
 
 
 

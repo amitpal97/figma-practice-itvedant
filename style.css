@@ -82,7 +82,7 @@
 }
 
 .pencil-line {
-  background-image: url("../images/Vector\ 3.png");
+  background-image: url("./images/Vector\ 3.png");
   background-repeat: no-repeat;
   background-position-y: bottom;
 }
@@ -412,7 +412,7 @@
 /*  screenTwo-bannerTwo start*/
 
 .screenTwo-bannerTwo {
-  background: url("../images/scrren-banner/Group\ 2831.png");
+  background: url("./images/scrren-banner/Group\ 2831.png");
   background-position: right;
   background-repeat: no-repeat;
   background-position-y: bottom;
