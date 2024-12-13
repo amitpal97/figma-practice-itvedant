@@ -333,6 +333,137 @@
 
 /* solution banner  end */
 
+/* signup form start */
+
+.login-wrapper {
+  width: 26%;
+  background-color: rgba(236, 237, 239, 1);
+  justify-content: center;
+  padding: 47px 157px 33px 155px;
+  margin-bottom: 200px;
+}
+.login-wrappe-paraOne {
+  margin-bottom: 37px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.signUp-Input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 31px;
+}
+
+.signUp-Input-wrapper input {
+  width: 327px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: start;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 1);
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.login-wrapper-btn {
+  padding: 11px 131px;
+  border-radius: 8px;
+  width: 327px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  text-align: center;
+  background-color: rgba(194, 245, 120, 1);
+  margin-bottom: 66px;
+}
+.login-wrapper-paraTwo {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  cursor: pointer;
+}
+/* signup form end */
+
+/*  screenTwo-bannerTwo start*/
+
+.screenTwo-bannerTwo {
+  background: url("../images/scrren-banner/Group\ 2831.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  height: 391px;
+  background-color: #ecedef;
+  align-items: flex-start;
+  margin-bottom: 200px;
+}
+
+.screenTwo-bannerTwo p {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+  padding-top: 64px;
+  padding-left: 53px;
+}
+
+/* screenTwo-bannerTwo end */
+
+/* screenTwo-screenTwoAll  start*/
+.screenTwo-screenTwoAll {
+  margin-bottom: 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+.screenTwo-screenTwoAll-paraWrapper {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.screenTwo-screenTwoAll-paraWrapper p {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.screenTwo-AllBlockWrapper {
+  display: flex;
+  gap: 93px;
+  flex-wrap: wrap;
+}
+
+.screenTwo-BlockAll {
+  width: 334px;
+  height: 273px;
+  border-radius: 23px;
+  background-color: rgba(236, 237, 239, 1);
+}
+/* screenTwo-screenTwoAll end */
+
 /*  classiq-footer start */
 .classiq-footer {
   flex-direction: column;
@@ -473,10 +604,10 @@
   width: 50px;
 }
 .classiq-footer-subblockright div:nth-child(2) {
-    width: 45px;
-  }
-  .classiq-footer-subblockright div:nth-child(3) {
-    width: 48px;
-  }
+  width: 45px;
+}
+.classiq-footer-subblockright div:nth-child(3) {
+  width: 48px;
+}
 
 /* classiq-footer end */
