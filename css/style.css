@@ -254,7 +254,6 @@
   padding-top: 160px;
   /* padding-bottom: 377px; */
   padding-bottom: 255px;
-
 }
 .solutbanner-left-block {
   width: 548px;
@@ -339,7 +338,6 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
-
 }
 .classiq-footer-block {
   display: flex;
@@ -468,8 +466,17 @@
 }
 
 .classiq-footer-subblockright {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
 }
+.classiq-footer-subblockright div {
+  width: 50px;
+}
+.classiq-footer-subblockright div:nth-child(2) {
+    width: 45px;
+  }
+  .classiq-footer-subblockright div:nth-child(3) {
+    width: 48px;
+  }
 
 /* classiq-footer end */
