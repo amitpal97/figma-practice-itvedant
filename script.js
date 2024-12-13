@@ -9,33 +9,92 @@ document.getElementById("signUpBtn").addEventListener("click", function () {
 })
 
 
+
 function signup(){
 let signupformbtn=  document.getElementById("signupformbtn")
 console.log("signupformbtn",signupformbtn);
+const username = document.getElementById("signupUsername").value;
+const email = document.getElementById("signupEmail").value;
+const password = document.getElementById("signupPassword").value;
 
-signupformbtn.addEventListener("click", function (e) {
-        
-        console.log(e);
-        e.preventDefault();
-        window.location.href = "./login.html"
-    })
+let isValid = true;
+document.getElementById("signupUsernameError").textContent = "";
+document.getElementById("signupEmailError").textContent = "";
+document.getElementById("signupPasswordError").textContent = "";
+
+if (username === "") {
+    document.getElementById("signupUsernameError").textContent =
+        "Username is required";
+    isValid = false;
+}
+
+if (email === "" || !/\S+@\S+\.\S+/.test(email)) {
+    document.getElementById("signupEmailError").textContent =
+        "Valid email is required";
+    isValid = false;
+}
+
+if (password === "" || password.length < 6) {
+    document.getElementById("signupPasswordError").textContent =
+        "Password must be at least 6 characters long";
+    isValid = false;
+}
+
+if (isValid) {
+    const newUser = { username, email, password };
+
+    let users = [JSON.parse(localStorage.getItem('users'))] || [];
+
+    const userExists = users.some(user => user.email === email);
+    if (userExists) {
+        alert('Username already exists. Please choose another.');
+        return;
+    }
+
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    setTimeout(()=>{
+        document.getElementById("signupMessage").textContent =
+        "Signup successful!";
+        window.location.href = "./login.html"},1000)
+ 
+}
+
 }
 
 function login(){
 let formloginFormBtn=document.getElementById("formloginFormBtn")
 console.log("formloginFormBtn",formloginFormBtn);
+const storedUser = JSON.parse(localStorage.getItem("user"))|| [];
+const storedArray=[]
+storedArray.push(storedUser)
+console.log("storedUser",storedUser);
+const email = document.getElementById("loginEmail").value;
+const password = document.getElementById("loginPassword").value;
 
-formloginFormBtn.addEventListener("click", function (e) {
-        console.log("login");
-        e.preventDefault();
+const validUser = storedArray.find(user => user.email === email && user.password === password);
+
+if (  validUser) {
+    document.getElementById("loginMessage").textContent =
+        "Login successful!";
         window.location.href = "./screen.html"
-        
-    })
+ 
+} else {
+    document.getElementById("loginMessage").textContent =
+        "Invalid email or password";
+        document.getElementById("loginEmail").value="";
+        document.getElementById("loginPassword").value=""
+}
 }
 
 try{
+    signupformbtn.addEventListener("click", function (e) {
+        
+        signup()   
+     
+    })
 
-    signup()   
 
 }
 catch(error){
@@ -46,27 +105,19 @@ console.log(error);
 
 try{
 
-    login();
+    formloginFormBtn.addEventListener("click", function (e) {
+        e.preventDefault()
+        console.log("login");
+        login();
+        
+        
+    })
+
 }
-catch(eror){
+catch(error){
 console.log(error);
 
 }
 
 
-
-
-
-
-
-
-// Function to show Signup form and hide others
-// function showSignupForm() {
-   
-// }
-// showSignupForm();
-
-// Function to show Login form and hide others
-// function showLoginForm() {
-    
 

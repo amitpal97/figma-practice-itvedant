@@ -47,13 +47,29 @@
       <form action="">
         <p class="login-wrappe-paraOne">SignUp</p>
         <div class="signUp-Input-wrapper">
-          <input type="email" placeholder="Enter Your Email" />
-          <input type="text" placeholder="Enter Your Fullname" />
-          <input type="password" placeholder="Enter Your Password" />
+          <input type="email" placeholder="Enter Your Email" id="signupEmail" />
+          <div class="error" id="signupEmailError"></div>
+
+          <input
+            type="text"
+            placeholder="Enter Your Fullname"
+            id="signupUsername"
+            required
+          />
+          <div class="error" id="signupUsernameError"></div>
+
+          <input
+            type="password"
+            placeholder="Enter Your Password"
+            id="signupPassword"
+            required
+          />
+          <div class="error" id="signupPasswordError"></div>
         </div>
-        <button type="submit" id="signupformbtn" class="login-wrapper-btn">
+        <button type="button" id="signupformbtn" class="login-wrapper-btn">
           SignUp
         </button>
+        <div class="message" id="signupMessage"></div>
 
         <p class="login-wrapper-paraTwo">
           <a href="./login.html"> Already have an account? Login</a>
