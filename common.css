@@ -35,6 +35,9 @@ button {
   background: none;
 }
 
+a{
+  width: 100%;
+}
 /* common */
 
 .elementCenter {

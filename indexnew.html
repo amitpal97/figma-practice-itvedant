@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container, .button-container, .welcome-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .message {
+            color: green;
+            font-size: 14px;
+            text-align: center;
+        }
+        .welcome-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button Container for Login and Signup -->
+    <div class="button-container" id="buttonContainer">
+        <h2>Welcome</h2>
+        <button onclick="showSignupForm()">Signup</button>
+        <button onclick="showLoginForm()">Login</button>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-container" id="signupForm" style="display: none;">
+        <h2>Signup</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="signupUsername" required>
+            <div class="error" id="signupUsernameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="signupEmail" required>
+            <div class="error" id="signupEmailError"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="signupPassword" required>
+            <div class="error" id="signupPasswordError"></div>
+        </div>
+        <button onclick="signup()">Signup</button>
+        <div class="message" id="signupMessage"></div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container" id="loginForm" style="display: none;">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <div class="error" id="loginUsernameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <div class="error" id="loginPasswordError"></div>
+        </div>
+        <button onclick="login()">Login</button>
+        <div class="message" id="loginMessage"></div>
+    </div>
+
+    <!-- Welcome Container -->
+    <div class="welcome-container" id="welcomeContainer">
+        <h2>Welcome!</h2>
+        <p id="welcomeMessage"></p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Function to show Signup form and hide others
+        function showSignupForm() {
+            document.getElementById('signupForm').style.display = 'block';
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('buttonContainer').style.display = 'none';
+        }
+
+        // Function to show Login form and hide others
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('buttonContainer').style.display = 'none';
+        }
+
+        // Function to show the welcome message after successful signup
+        function showWelcomeMessage(username) {
+            document.getElementById('welcomeMessage').textContent = `Hello, ${username}! Welcome to the site.`;
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('welcomeContainer').style.display = 'block';
+        }
+
+        // Function to handle Signup
+        function signup() {
+            // Get form inputs
+            const username = document.getElementById('signupUsername').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            // Simple validation
+            let isValid = true;
+            document.getElementById('signupUsernameError').textContent = '';
+            document.getElementById('signupEmailError').textContent = '';
+            document.getElementById('signupPasswordError').textContent = '';
+
+            if (username === '') {
+                document.getElementById('signupUsernameError').textContent = 'Username is required';
+                isValid = false;
+            }
+
+            if (email === '' || !/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById('signupEmailError').textContent = 'Valid email is required';
+                isValid = false;
+            }
+
+            if (password === '' || password.length < 6) {
+                document.getElementById('signupPasswordError').textContent = 'Password must be at least 6 characters long';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Store user data in localStorage
+                const user = { username, email, password };
+                localStorage.setItem('user', JSON.stringify(user));
+
+                document.getElementById('signupMessage').textContent = 'Signup successful!';
+
+                // Show welcome message
+                setTimeout(() => {
+                    showWelcomeMessage(username);
+                }, 1000);
+            }
+        }
+
+        // Function to handle Login
+        function login() {
+            // Get form inputs
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Retrieve user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.username === username && storedUser.password === password) {
+                document.getElementById('loginMessage').textContent = 'Login successful!';
+                // Show welcome message after login
+                showWelcomeMessage(username);
+            } else {
+                document.getElementById('loginMessage').textContent = 'Invalid username or password';
+            }
+        }
+
+        // Function to handle Logout
+        function logout() {
+            document.getElementById('welcomeContainer').style.display = 'none';
+            document.getElementById('buttonContainer').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

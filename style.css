@@ -334,6 +334,13 @@
 /* solution banner  end */
 
 /* signup form start */
+#signupForm {
+  /* display: none; */
+}
+
+#loginForm {
+  /* display: none; */
+}
 
 .login-wrapper {
   width: 26%;
