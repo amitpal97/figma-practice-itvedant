@@ -347,7 +347,7 @@
   background-color: rgba(236, 237, 239, 1);
   justify-content: center;
   padding: 47px 157px 33px 155px;
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
 }
 .login-wrappe-paraOne {
   margin-bottom: 37px;

@@ -35,7 +35,7 @@ button {
   background: none;
 }
 
-a{
+a {
   width: 100%;
 }
 /* common */
@@ -52,5 +52,11 @@ a{
 }
 
 .mtminus7 {
-    margin-top: -7px;
-  }
+  margin-top: -7px;
+}
+
+.message,
+.error {
+  color: red;
+  text-decoration: underline;
+}

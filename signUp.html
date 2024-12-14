@@ -47,7 +47,12 @@
       <form action="">
         <p class="login-wrappe-paraOne">SignUp</p>
         <div class="signUp-Input-wrapper">
-          <input type="email" placeholder="Enter Your Email" id="signupEmail" />
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            id="signupEmail"
+            name="email"
+          />
           <div class="error" id="signupEmailError"></div>
 
           <input
@@ -64,12 +69,12 @@
             id="signupPassword"
             required
           />
+          <div class="message" id="signupMessage"></div>
           <div class="error" id="signupPasswordError"></div>
         </div>
         <button type="button" id="signupformbtn" class="login-wrapper-btn">
           SignUp
         </button>
-        <div class="message" id="signupMessage"></div>
 
         <p class="login-wrapper-paraTwo">
           <a href="./login.html"> Already have an account? Login</a>
