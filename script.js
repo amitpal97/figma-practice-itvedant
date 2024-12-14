@@ -7,6 +7,10 @@ document.getElementById("signUpBtn").addEventListener("click", function () {
 })
 
 
+document.querySelector(".left-navbar").addEventListener("click", function () {
+    window.location.href = "./index.html"
+
+})
 
 function signup() {
     let signupformbtn = document.getElementById("signupformbtn")
@@ -59,7 +63,7 @@ function signup() {
 
         setTimeout(() => {
             window.location.href = "./login.html"
-        }, 5000)
+        }, 1000)
 
     }
 
@@ -80,7 +84,10 @@ function login() {
     if (validUser) {
         document.getElementById("loginMessage").textContent =
             "Login successful!";
-        window.location.href = "./screen.html"
+        setTimeout(() => {
+
+            window.location.href = "./screen.html"
+        }, 1000)
 
     } else {
         document.getElementById("loginMessage").textContent =

@@ -364,7 +364,7 @@
 .signUp-Input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
   margin-bottom: 31px;
 }
 
